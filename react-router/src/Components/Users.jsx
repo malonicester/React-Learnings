@@ -15,7 +15,7 @@ function Users() {
   const [error, setError] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
   const [page, setPage] = useState(
-    Number(searchParams.get("page")) === 0 || searchParams.get("page") ===NaN
+    Number(searchParams.get("page")) === 0 
       ? 1
       : Number(searchParams.get("page"))
   );

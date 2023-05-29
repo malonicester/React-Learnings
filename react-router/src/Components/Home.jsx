@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Home() {
-  return (
-    <div>Home</div>
-  )
+  return <h1>Data coming from {import.meta.env.VITE_APP_DEV_URL}</h1>;
 }
 
-export default Home
+export default Home;
