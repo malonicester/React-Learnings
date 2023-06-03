@@ -1,0 +1,83 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "todos": [
+    {
+      "title": "Something new here",
+      "completed": false,
+      "id": 1
+    },
+    {
+      "title": "Learning REACT_REDUX",
+      "completed": false,
+      "id": 2
+    },
+    {
+      "title": "Comedy King",
+      "completed": false,
+      "id": 3
+    },
+    {
+      "title": "Redux me fat rahi",
+      "completed": false,
+      "id": 4
+    },
+    {
+      "title": "Komedy Karuchi mu hhha",
+      "completed": false,
+      "id": 5
+    },
+    {
+      "title": "Kesi bat",
+      "completed": false,
+      "id": 6
+    },
+    {
+      "title": "asdfa",
+      "completed": false,
+      "id": 7
+    },
+    {
+      "title": "asdfa",
+      "completed": false,
+      "id": 8
+    },
+    {
+      "title": "asdfa",
+      "completed": false,
+      "id": 9
+    },
+    {
+      "title": "kead",
+      "completed": false,
+      "id": 10
+    },
+    {
+      "title": "kimdjk",
+      "completed": false,
+      "id": 11
+    },
+    {
+      "title": "padhe be",
+      "completed": false,
+      "id": 12
+    },
+    {
+      "title": "padhi chale",
+      "completed": false,
+      "id": 13
+    }
+  ]
+}
