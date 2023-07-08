@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { addTodo, getTodos } from '../../redux/Todo/Todoaction';
 import { useDispatch } from 'react-redux';
+import { addTodo, getTodos } from '../../redux/Todo/Todoaction';
 
 const TodoInput = () => {
 
   const [title, setTitle] = useState('');
-
+ 
   const dispatch = useDispatch();
 
   const handleAddTodo = () => {
@@ -16,6 +16,7 @@ const TodoInput = () => {
     <div>
       <input type="text" placeholder='Enter Todo' onInput={(e) => setTitle(e.target.value)} />
       <button onClick={handleAddTodo} >ADD TODO</button>
+      <h1> { } </h1>
     </div>
   )
 }

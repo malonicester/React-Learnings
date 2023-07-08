@@ -27,7 +27,7 @@
     },
     {
       "title": "Learning Redis",
-      "completed": false,
+      "completed": true,
       "id": 6
     },
     {
@@ -37,7 +37,7 @@
     },
     {
       "title": "Motiu",
-      "completed": false,
+      "completed": true,
       "id": 8
     }
   ]
