@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Learn Redux",
-      "completed": false
+      "completed": true
     },
     {
       "id": 2,
@@ -17,7 +17,7 @@
     },
     {
       "title": "Redux=",
-      "completed": true,
+      "completed": false,
       "id": 4
     },
     {
@@ -27,7 +27,7 @@
     },
     {
       "title": "Learning Redis",
-      "completed": true,
+      "completed": false,
       "id": 6
     },
     {
@@ -39,6 +39,16 @@
       "title": "Motiu",
       "completed": true,
       "id": 8
+    },
+    {
+      "title": "Komedy",
+      "completed": false,
+      "id": 9
+    },
+    {
+      "title": "Thunk",
+      "completed": false,
+      "id": 10
     }
   ]
 }

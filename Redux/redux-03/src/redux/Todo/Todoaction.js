@@ -17,7 +17,7 @@ const updateTodoFailure = () => ({ type: TodoActions.UPDATE_TODO_FAILURE });
 
 
 
-export const addTodo = async ({ title }, dispatch) => {
+export const addTodo =  ({ title }) => async (dispatch) => {
     try {
         dispatch(addTodoRequest());
         const response = await axios({
@@ -36,30 +36,29 @@ export const addTodo = async ({ title }, dispatch) => {
     }
 }
 
-export const getTodos = async (dispatch) => {
+export const getTodos = () => async (dispatch) => {
+    console.log("called");
+    dispatch(getTodoRequest());
     try {
-        dispatch(getTodoRequest());
-        return await axios.get('http://localhost:3001/todos')
-            .then((data) => {
-                console.log()
-                dispatch(getTodoSuccess(data.data));
-            });
+        const data = await axios.get('http://localhost:3001/todos');
+        console.log(data);
+        dispatch(getTodoSuccess(data.data));
     } catch (error) {
-        console.log(error)
         dispatch(getTodoFailure());
     }
+
 }
 
-export const updateTodo = async ({ id, completed }, dispatch) => {
+export const updateTodo = ({ id, completed }) => async (dispatch) => {
     try {
         dispatch(updateTodoRequest());
-        return await axios({
+        await axios({
             url: `http://localhost:3001/todos/${id}`,
             method: "PATCH",
             data: {
                 completed: !completed
             }
-        }).then((response)=>{
+        }).then((response) => {
             dispatch(updateTodoSuccess(response.data))
         })
     }

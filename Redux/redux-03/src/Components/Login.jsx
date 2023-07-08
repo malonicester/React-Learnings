@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useDispatch,useSelector } from 'react-redux';
+import { shallowEqual, useDispatch,useSelector } from 'react-redux';
 import { loginHandler } from '../redux/Authentication/AuthenticationActions';
 export const Login = () => {
     const [formData, setformData] = useState({
@@ -11,11 +11,11 @@ export const Login = () => {
         token: state.authentication.token,
         isLoading: state.authentication.isLoading,
         error: state.authentication.error
-      }))
+      }),shallowEqual)
     const dispatch = useDispatch();
 
     const handleLogin = () => {
-        loginHandler(formData, dispatch);
+        dispatch(loginHandler(formData));
     }
     console.log(isAuthenticated,token,isLoading,error)
     return (

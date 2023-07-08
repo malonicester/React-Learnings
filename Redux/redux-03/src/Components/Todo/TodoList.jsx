@@ -11,16 +11,16 @@ const TodoList = () => {
   const dispatch = useDispatch();
 
   const handleStatus = (id, completed) => {
-      updateTodo({ id, completed }, dispatch)
-        .then(() => getTodos(dispatch))
+      dispatch(updateTodo({ id, completed }))
+        .then(() => dispatch(getTodos()))
         .catch((error) => console.log(error));
   }
 
   useEffect( () => {
-    getTodos(dispatch)
+    dispatch(getTodos());
   }, [])
 
-  console.log("Rendering")
+  console.log(todo)
   return (
     <div>
       {

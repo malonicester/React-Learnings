@@ -5,11 +5,12 @@ import { addTodo, getTodos } from '../../redux/Todo/Todoaction';
 const TodoInput = () => {
 
   const [title, setTitle] = useState('');
- 
+
   const dispatch = useDispatch();
 
   const handleAddTodo = () => {
-    addTodo({ title }, dispatch).then(() => getTodos(dispatch))
+    dispatch(addTodo({ title }))
+      .then(() => dispatch(getTodos()))
   }
 
   return (
