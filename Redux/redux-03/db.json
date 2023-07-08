@@ -8,22 +8,37 @@
     {
       "id": 2,
       "title": "Learn React",
-      "completed": true
+      "completed": false
     },
     {
       "title": "Ashsih",
-      "completed": true,
+      "completed": false,
       "id": 3
     },
     {
       "title": "Redux=",
-      "completed": false,
+      "completed": true,
       "id": 4
     },
     {
       "title": "Komedy King",
       "completed": true,
       "id": 5
+    },
+    {
+      "title": "Learning Redis",
+      "completed": false,
+      "id": 6
+    },
+    {
+      "title": "Asgusg ",
+      "completed": false,
+      "id": 7
+    },
+    {
+      "title": "Motiu",
+      "completed": false,
+      "id": 8
     }
   ]
 }

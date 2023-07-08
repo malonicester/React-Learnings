@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import TodoElement from './TodoElement';
-import { useDispatch, useSelector } from 'react-redux';
+import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { getTodos, updateTodo } from '../../redux/Todo/Todoaction'
 
 const TodoList = () => {
-  const todo = useSelector(state => state.todo.todo);
+  const todo = useSelector(state => state.todo.todo,shallowEqual);
   const loading = useSelector(state => state.todo.loading);
   const error = useSelector(state => state.todo.error);
 
@@ -17,10 +17,10 @@ const TodoList = () => {
   }
 
   useEffect( () => {
-    getTodos(dispatch).then(()=>console.log("Rendered"))
+    getTodos(dispatch)
   }, [])
 
-
+  console.log("Rendering")
   return (
     <div>
       {

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { addTodo } from '../../redux/Todo/Todoaction';
+import { addTodo, getTodos } from '../../redux/Todo/Todoaction';
 import { useDispatch } from 'react-redux';
 
 const TodoInput = () => {
@@ -9,7 +9,7 @@ const TodoInput = () => {
   const dispatch = useDispatch();
 
   const handleAddTodo = () => {
-    addTodo({ title }, dispatch);
+    addTodo({ title }, dispatch).then(() => getTodos(dispatch))
   }
 
   return (

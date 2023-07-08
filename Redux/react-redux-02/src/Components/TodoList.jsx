@@ -5,9 +5,11 @@ import TodoItem from './TodoItem';
 
 const TodoList = () => {
 
-    const todos = useSelector(state => state.todo.todos);
-    const loading = useSelector(state => state.todo.loading);
-    const error = useSelector(state => state.todo.error);
+    const { todos, loading, error } = useSelector((state) => ({
+        todos: state.todo,
+        loading: state.loading,
+        error: state.error
+    }));
 
     const dispatch = useDispatch();
 
@@ -20,7 +22,7 @@ const TodoList = () => {
     useEffect(() => {
         dispatch(getTodos());
     }, []);
-
+    console.log(todos,loading,error);
     return (
         <div>
             <h1>Todos</h1>
