@@ -1,8 +1,8 @@
-// File: C:\Users\ashis\.vscode\Masai\React\NextJs\next-app-01\app\layout.tsx
-import * as entry from '../../../app/layout.js'
+// File: C:\Users\ashis\.vscode\Masai\React\NextJs\next-app-01\src\app\layout.tsx
+import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
-type TEntry = typeof import('../../../app/layout.js')
+type TEntry = typeof import('../../../src/app/layout.js')
 
 // Check that the entry is a valid entry
 checkFields<Diff<{
@@ -15,6 +15,7 @@ checkFields<Diff<{
   fetchCache?: 'auto' | 'force-no-store' | 'only-no-store' | 'default-no-store' | 'default-cache' | 'only-cache' | 'force-cache'
   preferredRegion?: 'auto' | 'global' | 'home' | string | string[]
   runtime?: 'nodejs' | 'experimental-edge' | 'edge'
+  maxDuration?: number
   
   metadata?: any
   generateMetadata?: Function
